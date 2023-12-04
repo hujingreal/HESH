@@ -36,4 +36,5 @@ make
 See `autorun.sh`
 
 ## Note
-You are required to modify the path of the PM, identified as ‘index_pool_name’, in the ‘hash_api.h’ file to align with the path in your environment. For SOFT, you still need to set the path named ‘PMEM_LOC1’ in the ‘ssmem.cpp’ file. Additionally, due to hardware constraints, our experimental setup utilizes only four Optane DIMMs. If your system includes six Optane DIMMs, it is necessary to adjust the value of ‘kDimmNum’ in the ‘hesh_pm_allocator.h’ file to six. This modification ensures that the number of Optane DIMMs in your environment is accurately reflected.
+1. You are required to modify the path of the PM, identified as ‘index_pool_name’, in the ‘hash_api.h’ file to match the path in your specific environment. For SOFT, you also need to set the path named ‘PMEM_LOC1’ in the ‘ssmem.cpp’ file. Additionally, for the 'autorun.sh' script, you must configure the path for the 'pm' variable.
+2. Due to hardware constraints, our experimental setup only uses four Optane DIMMs. If your system is equipped with six Optane DIMMs, you must adjust the value of ‘kDimmNum’ in the ‘hesh_pm_allocator.h’ file to six. This adjustment ensures that the number of Optane DIMMs in your environment is accurately reflected.
